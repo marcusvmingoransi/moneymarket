@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+$white: #ffffff;
+
+$light-gray: #f8f9fa;
+$green-primary: #40C057;
+
+body{
+  margin: 0;
+}
+
+.btn-primary{
+  background-color: $green-primary;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $white;
+}
