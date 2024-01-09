@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { LogoComponent } from './logo/logo.component';
 import { MaterialModule } from '../material/material.module';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { MaterialModule } from '../material/material.module';
     HomeComponent,
     FooterComponent,
     LogoComponent,
+    CardComponent,
   ],
   imports: [CommonModule, MaterialModule],
   exports: [HeaderComponent, HomeComponent, FooterComponent, LogoComponent],
