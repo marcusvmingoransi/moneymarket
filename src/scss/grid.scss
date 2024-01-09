@@ -1,0 +1,57 @@
+$breakpoint-xs: 480px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$columns: 12;
+
+@mixin grid-column($columns) {
+  grid-column: span $columns;
+}
+
+@mixin responsive-columns($breakpoint, $columns) {
+  @media all and (min-width: $breakpoint) {
+    @include grid-column($columns);
+  }
+}
+
+.container, .container-fluid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+  margin: 0 auto;
+  max-width: 1200px;
+
+  @media (max-width: $breakpoint-xs) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.container-fluid {
+  max-width: 100%;
+  padding: 0;
+}
+
+.col {
+  height: fit-content;
+  @include grid-column($columns);
+
+  @for $i from 1 through $columns {
+    &.col-#{$i} { @include grid-column(#{$i}); }
+  }
+  @for $i from 1 through $columns {
+    &.col-xs-#{$i} { @include responsive-columns($breakpoint-xs, #{$i}); }
+  }
+  @for $i from 1 through $columns {
+    &.col-sm-#{$i} { @include responsive-columns($breakpoint-sm, #{$i}); }
+  }
+  @for $i from 1 through $columns {
+    &.col-md-#{$i} { @include responsive-columns($breakpoint-md, #{$i}); }
+  }
+  @for $i from 1 through $columns {
+    &.col-lg-#{$i} { @include responsive-columns($breakpoint-lg, #{$i}); }
+  }
+  @for $i from 1 through $columns {
+    &.col-xl-#{$i} { @include responsive-columns($breakpoint-xl, #{$i}); }
+  }
+}

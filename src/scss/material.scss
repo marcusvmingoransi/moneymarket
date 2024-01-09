@@ -1,0 +1,86 @@
+@import './functions/colors-function.scss';
+
+.mat-form-field {
+  width: 100%;
+}
+.mat-card {
+  &:not([class*='mat-elevation-z']) {
+    box-shadow: none;
+  }
+}
+
+.mat-focused .mat-form-field-label {
+  color: get-primary-color(500);
+}
+.mat-form-field-label {
+  color: get-primary-color(500);
+  font-weight: 700;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: get-primary-color(500);
+}
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline {
+  color: get-primary-color(500);
+}
+
+.mat-form-field-wrapper {
+  padding-bottom: 0;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.mat {
+  &-raised-button,
+  &-flat-button {
+    color: white !important;
+  }
+}
+
+.mat-button-toggle-group {
+  background-color: #e0e0e3;
+}
+
+.mat-button-toggle-disabled.mat-button-toggle-checked {
+  background: #ffffff;
+  .mat-button-toggle-button {
+    background-color: #bdbdbd;
+  }
+}
+
+.mat-button-toggle-checked.mat-button-toggle-appearance-standard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  .mat-button-toggle-button {
+    background-color: get-primary-color(800);
+    border-radius: 4px;
+    padding: 4px;
+    color: #ffffff;
+    .mat-button-toggle-label-content {
+      line-height: 0;
+    }
+  }
+}
+.mat-button-toggle {
+  min-width: 92px;
+  &-appearance-standard {
+    background-color: transparent;
+  }
+}

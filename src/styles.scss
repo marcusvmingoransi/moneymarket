@@ -1,16 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
-$white: #ffffff;
+@import './scss/sizes.scss';
+@import './scss/colors.scss';
+@import './scss/theme.scss';
+@import './scss/fonts.scss';
+@import './scss/grid.scss';
+@import './scss/material.scss';
 
-$light-gray: #f8f9fa;
-$green-primary: #40C057;
-
-body{
+body {
   margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background-color: #f8f8fc;
+  display: flex;
+  flex-direction: column;
 }
 
-.btn-primary{
-  background-color: $green-primary;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: $white;
+.footer-icon-disabled svg path {
+  fill: #e0e0e3;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: #f8f8fc;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: darken(#e0e0e3, 20%);
+  border-radius: 16px;
+}
+
+.snackbar {
+  color: #ffffff;
+  &-success {
+    background-color: #50af31;
+  }
+  &-error {
+    background-color: #ec2c07;
+  }
+  .mat-button {
+    color: #ffffff;
+  }
+}
+
+.mat-button-toggle-disabled.mat-button-toggle-checked
+  .mat-button-toggle-button {
+  background-color: #bdbdbd;
 }
