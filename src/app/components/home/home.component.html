@@ -1,8 +1,24 @@
-<section>
+<section class="home">
   <div class="container">
     <div class="col col-12">
       <app-card>
-        <h1>Pingo Doce</h1>
+        <div class="row">
+          <div class="col col-4">
+            <span>mercado:</span>
+            <h4>Pingo Doce</h4>
+          </div>
+          <div class="col col-4">
+            <span>Items:</span>
+            <h4>12</h4>
+          </div>
+          <div class="col col-4">
+            <span>valor:</span>
+            <h4>59,90 €</h4>
+          </div>
+          <div class="col col-12">
+            <p>Última Compra</p>
+          </div>
+        </div>
       </app-card>
     </div>
     <div class="col col-6">
@@ -27,9 +43,23 @@
     </div>
     <div class="col col-12">
       <app-card>
-        <h1>Última Compra</h1>
+        <div class="row">
+          <div class="col col-4">
+            <span>moeda:</span>
+            <h4>Euro €</h4>
+          </div>
+          <div class="col col-8">
+            <span>modo de visualização:</span>
+            <h4>Última Compra</h4>
+          </div>
+          <div class="col col-12">
+            <p>Configurações</p>
+          </div>
+        </div>
       </app-card>
     </div>
   </div>
-  <button mat-raised-button color="primary">Começar</button>
+  <button mat-raised-button color="primary" class="home--btn-start">
+    Começar
+  </button>
 </section>

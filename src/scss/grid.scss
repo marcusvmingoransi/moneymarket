@@ -15,7 +15,8 @@ $columns: 12;
   }
 }
 
-.container, .container-fluid {
+.container,
+.container-fluid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 16px;
@@ -32,26 +33,43 @@ $columns: 12;
   padding: 0;
 }
 
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
 .col {
   height: fit-content;
   @include grid-column($columns);
 
   @for $i from 1 through $columns {
-    &.col-#{$i} { @include grid-column(#{$i}); }
+    &.col-#{$i} {
+      @include grid-column(#{$i});
+    }
   }
   @for $i from 1 through $columns {
-    &.col-xs-#{$i} { @include responsive-columns($breakpoint-xs, #{$i}); }
+    &.col-xs-#{$i} {
+      @include responsive-columns($breakpoint-xs, #{$i});
+    }
   }
   @for $i from 1 through $columns {
-    &.col-sm-#{$i} { @include responsive-columns($breakpoint-sm, #{$i}); }
+    &.col-sm-#{$i} {
+      @include responsive-columns($breakpoint-sm, #{$i});
+    }
   }
   @for $i from 1 through $columns {
-    &.col-md-#{$i} { @include responsive-columns($breakpoint-md, #{$i}); }
+    &.col-md-#{$i} {
+      @include responsive-columns($breakpoint-md, #{$i});
+    }
   }
   @for $i from 1 through $columns {
-    &.col-lg-#{$i} { @include responsive-columns($breakpoint-lg, #{$i}); }
+    &.col-lg-#{$i} {
+      @include responsive-columns($breakpoint-lg, #{$i});
+    }
   }
   @for $i from 1 through $columns {
-    &.col-xl-#{$i} { @include responsive-columns($breakpoint-xl, #{$i}); }
+    &.col-xl-#{$i} {
+      @include responsive-columns($breakpoint-xl, #{$i});
+    }
   }
 }
